@@ -41,9 +41,8 @@ fn main() {
         );
 
         if _display_all_number {
-            for index in 0.._n.unwrap() {
+            for index in 0..(_n.unwrap()+1) {
                 let fibo_param = FiboParam {
-                    _display_all_number,
                     k: k.unwrap(),
                     n: index,
                 };
@@ -51,7 +50,6 @@ fn main() {
             }
         } else {
             let fibo_param = FiboParam {
-                _display_all_number,
                 k: k.unwrap(),
                 n: _n.unwrap(),
             };
@@ -65,7 +63,6 @@ fn output_info() {
 }
 
 struct FiboParam {
-    _display_all_number: bool,
     k: u32,
     n: u32,
 }
@@ -84,7 +81,6 @@ fn fn_fibo(fibo: FiboParam) -> u32 {
                 for index in (fibo.n - fibo.k)..fibo.n {
                     ret = ret
                         + fn_fibo(FiboParam {
-                            _display_all_number: fibo._display_all_number,
                             k: fibo.k,
                             n: index,
                         })
