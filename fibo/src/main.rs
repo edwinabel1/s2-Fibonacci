@@ -41,7 +41,7 @@ fn main() {
         );
 
         if _display_all_number {
-            for index in 0..(_n.unwrap()+1) {
+            for index in 0..(_n.unwrap() + 1) {
                 let fibo_param = FiboParam {
                     k: k.unwrap(),
                     n: index,
@@ -85,7 +85,6 @@ fn fn_fibo(fibo: FiboParam) -> u32 {
                             n: index,
                         })
                 }
-
                 ret
             }
         }
